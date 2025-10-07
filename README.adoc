@@ -1,4 +1,7 @@
 :project-name: macOS Dev Config
+:laptop: MacBook Pro 13-inch (M1, 2020)
+:mac-version: Tahoe 26.0
+:hostname: dresden
 :nix-darwin-url: https://github.com/nix-darwin/nix-darwin
 
 = {project-name}
@@ -6,5 +9,5 @@
 This project automates the configuration of my personal macOS development environment via
 {nix-darwin-url}[nix-darwin].
 
-This configuration is currently deployed on my MacBook Pro 13-inch (M1, 2020) running Tahoe
-26.0.
+NOTE: This configuration is currently deployed on my {laptop} running {mac-version}, which I've
+nicknamed `{hostname}`.
