@@ -21,8 +21,8 @@ nicknamed `{hostname}`.
 
 To set up a new Mac with this configuration, follow these steps:
 
-*1. Install Nix using the {determinate-nix-installer-url}[Nix Installer from Determinate
-   Systems]:*
+*1. Install Nix using the* {determinate-nix-installer-url}[Nix Installer from Determinate
+   Systems]*:*
 
 [source,bash]
 ----
