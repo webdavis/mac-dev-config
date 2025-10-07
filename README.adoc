@@ -3,6 +3,11 @@
 :mac-version: Tahoe 26.0
 :hostname: dresden
 :nix-darwin-url: https://github.com/nix-darwin/nix-darwin
+:nix-darwin-version: 25.05
+:determinate-nix-installer-url: https://github.com/DeterminateSystems/nix-installer
+
+// The date when Determinate Nix compatibility with nix-darwin was last checked.
+:last-checked: 2025-10-07
 
 = {project-name}
 
@@ -11,3 +16,30 @@ This project automates the configuration of my personal macOS development enviro
 
 NOTE: This configuration is currently deployed on my {laptop} running {mac-version}, which I've
 nicknamed `{hostname}`.
+
+== Install
+
+To set up a new Mac with this configuration, follow these steps:
+
+*1. Install Nix using the {determinate-nix-installer-url}[Nix Installer from Determinate
+   Systems]:*
+
+[source,bash]
+----
+curl -fsSL https://install.determinate.systems/nix | sh -s -- install
+----
+
+[IMPORTANT]
+====
+When prompted with `Install Determinate Nix?`, say `no`
+
+- *Reason:* Determinate Nix is incompatible with nix-darwin {nix-darwin-version}
+- *Last compatibility check:* `{last-checked}`
+====
+
+*2. Apply this configuration to your Mac:*
+
+[source,bash]
+----
+nix run nix-darwin -- switch --flake github:webdavis/mac-dev-config#dresden
+----
