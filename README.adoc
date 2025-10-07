@@ -39,7 +39,7 @@ When prompted with `Install Determinate Nix?`, say `no`
 
 *2. Apply this configuration to your Mac:*
 
-[source,bash]
+[source,bash,subs=attributes]
 ----
-nix run nix-darwin -- switch --flake github:webdavis/mac-dev-config#dresden
+nix run nix-darwin -- switch --flake github:webdavis/mac-dev-config#{hostname}
 ----
